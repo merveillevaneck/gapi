@@ -62,7 +62,7 @@ func run(logger *log.Logger) error {
 	cfg.httpPort = env.GetInt("HTTP_PORT", 4444)
 	cfg.basicAuth.username = env.GetString("BASIC_AUTH_USERNAME", "admin")
 	cfg.basicAuth.hashedPassword = env.GetString("BASIC_AUTH_HASHED_PASSWORD", "$2a$10$jRb2qniNcoCyQM23T59RfeEQUbgdAXfR6S0scynmKfJa5Gj3arGJa")
-	cfg.db.dsn = env.GetString("DB_DSN", "user:pass@tcp(localhost:3306)/example?parseTime=true")
+	cfg.db.dsn = env.GetString("DB_DSN", "root:12345qQ!@tcp(localhost:3306)/go_test?parseTime=true")
 	cfg.db.automigrate = env.GetBool("DB_AUTOMIGRATE", true)
 	cfg.jwt.secretKey = env.GetString("JWT_SECRET_KEY", "5y2ktpm2nig2tzq5yzpkrpp5l2m53gsy")
 	cfg.smtp.host = env.GetString("SMTP_HOST", "example.smtp.host")
